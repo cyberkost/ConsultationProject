@@ -1,14 +1,14 @@
+package company;
+
 public class Employee {
     private String name;
     private String surname;
-    private String position;
     private int salary;
-    private String department;
+    private Department department;
 
-    public Employee(String name, String surname, String position, int salary, String department) {
+    public Employee(String name, String surname, int salary, Department department) {
         this.name = name;
         this.surname = surname;
-        this.position = position;
         this.salary = salary;
         this.department = department;
     }
@@ -29,14 +29,6 @@ public class Employee {
         this.surname = surname;
     }
 
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
     public int getSalary() {
         return salary;
     }
@@ -45,26 +37,36 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getDepartment() {
+    public Department getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(Department department) {
         this.department = department;
     }
 }
 
 class StaffEmployee extends Employee {
+    private int term;
 
-    public StaffEmployee(String name, String surname, String position, int salary, String department) {
-        super(name, surname, position, salary, department);
+    public StaffEmployee(int term, String name, String surname, int salary, Department department) {
+        super(name, surname, salary, department);
+        this.term = term;
+    }
+
+    public int getTerm() {
+        return term;
+    }
+
+    public void setTerm(int term) {
+        this.term = term;
     }
 }
 
 class ContractEmployee extends Employee {
 
-    public ContractEmployee(String name, String surname, String position, int salary, String department) {
-        super(name, surname, position, salary, department);
+    public ContractEmployee(String name, String surname, int salary, Department department) {
+        super(name, surname, salary, department);
     }
 }
 
