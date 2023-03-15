@@ -1,4 +1,4 @@
-package homework_03_04_2023;
+package homework_02_24_2023;
 
 public class Task1 {
     public static void main(String[] args) {
