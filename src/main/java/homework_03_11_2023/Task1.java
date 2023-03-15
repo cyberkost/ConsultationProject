@@ -12,12 +12,8 @@ public class Task1 {
         list2.add(1);
         list2.add(3);
         list2.add(4);
-        ArrayList<Integer> list3 = mergeSortedLists(list1, list2);
-        System.out.println(list3);
-    }
-
-    public static ArrayList<Integer> mergeSortedLists(ArrayList<Integer> list1, ArrayList<Integer> list2) {
         ArrayList<Integer> list3 = new ArrayList<>();
+
         int i = 0;
         int j = 0;
         while (i < list1.size() && j < list2.size()) {
@@ -37,7 +33,6 @@ public class Task1 {
             list3.add(list2.get(j));
             j++;
         }
-        return list3;
+        System.out.println(list3);
     }
 }
-
