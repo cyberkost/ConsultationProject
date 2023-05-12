@@ -16,7 +16,7 @@ import java.util.Stack;
 // Output: 0
 
 public class Main {
-    public static int longestValidParentheses(String s) {
+    public static int findNumberOfBrackets(String s) {
         int maxLen = 0;
         Stack<Integer> stack = new Stack<>();
         int lastUnpaired = -1;
@@ -43,8 +43,8 @@ public class Main {
         String s1 = "(()";
         String s2 = ")()())";
         String s3 = "";
-        System.out.println(longestValidParentheses(s1));
-        System.out.println(longestValidParentheses(s2));
-        System.out.println(longestValidParentheses(s3));
+        System.out.println(findNumberOfBrackets(s1));
+        System.out.println(findNumberOfBrackets(s2));
+        System.out.println(findNumberOfBrackets(s3));
     }
 }
